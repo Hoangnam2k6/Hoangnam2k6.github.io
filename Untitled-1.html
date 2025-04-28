@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Nhà Hàng</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #fff8f0;
+    }
+    h1 {
+      text-align: center;
+      color: #c1440e;
+    }
+    .buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      background-color: #c1440e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a83909;
+    }
+    .menu {
+      display: none;
+      margin-top: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 8px;
+      background: #ffe6cc;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Menu Nhà Hàng</h1>
+
+  <div class="buttons">
+    <button onclick="showMenu('main')">Món Chính</button>
+    <button onclick="showMenu('side')">Món Phụ</button>
+    <button onclick="showMenu('drink')">Đồ Uống</button>
+  </div>
+
+  <div id="main" class="menu">
+    <h2>Món Chính</h2>
+    <ul>
+      <li>Phở Bò</li>
+      <li>Cơm Tấm</li>
+      <li>Bún Chả</li>
+    </ul>
+  </div>
+
+  <div id="side" class="menu">
+    <h2>Món Phụ</h2>
+    <ul>
+      <li>Gỏi Cuốn</li>
+      <li>Chả Giò</li>
+      <li>Đậu Hũ Chiên</li>
+    </ul>
+  </div>
+
+  <div id="drink" class="menu">
+    <h2>Đồ Uống</h2>
+    <ul>
+      <li>Trà Đào</li>
+      <li>Nước Chanh</li>
+      <li>Cà Phê Sữa</li>
+    </ul>
+  </div>
+
+  <script>
+    function showMenu(menuId) {
+      const menus = document.querySelectorAll('.menu');
+      menus.forEach(menu => {
+        menu.style.display = 'none';
+      });
+      document.getElementById(menuId).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
